@@ -13,3 +13,4 @@ add_compile_options(
 
 add_subdirectory(lab02)
 add_subdirectory(lab03)
+add_subdirectory(lab04)
