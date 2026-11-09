@@ -1,0 +1,199 @@
+929   execve("./build/lab01-linux/lab04/lab04_parent", ["./build/lab01-linux/lab04/lab04_"...], 0xffffccd13dc8 /* 8 vars */) = 0
+929   brk(NULL)                         = 0xaaaaf4543000
+929   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xffffb30de000
+929   faccessat(AT_FDCWD, "/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+929   openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+929   fstat(3, {st_mode=S_IFREG|0644, st_size=8743, ...}) = 0
+929   mmap(NULL, 8743, PROT_READ, MAP_PRIVATE, 3, 0) = 0xffffb30db000
+929   close(3)                          = 0
+929   openat(AT_FDCWD, "/lib/aarch64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+929   read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\360\206\2\0\0\0\0\0"..., 832) = 832
+929   fstat(3, {st_mode=S_IFREG|0755, st_size=1722920, ...}) = 0
+929   mmap(NULL, 1892240, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_DENYWRITE, -1, 0) = 0xffffb2ed8000
+929   mmap(0xffffb2ee0000, 1826704, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0) = 0xffffb2ee0000
+929   munmap(0xffffb2ed8000, 32768)     = 0
+929   munmap(0xffffb309e000, 32656)     = 0
+929   mprotect(0xffffb307a000, 77824, PROT_NONE) = 0
+929   mmap(0xffffb308d000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19d000) = 0xffffb308d000
+929   mmap(0xffffb3092000, 49040, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xffffb3092000
+929   close(3)                          = 0
+929   set_tid_address(0xffffb30defb0)   = 929
+929   set_robust_list(0xffffb30defc0, 24) = 0
+929   rseq(0xffffb30df600, 0x20, 0, 0xd428bc00) = 0
+929   mprotect(0xffffb308d000, 12288, PROT_READ) = 0
+929   mprotect(0xaaaacf36f000, 4096, PROT_READ) = 0
+929   mprotect(0xffffb30e4000, 8192, PROT_READ) = 0
+929   prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+929   munmap(0xffffb30db000, 8743)      = 0
+929   fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}) = 0
+929   getrandom("\x29\x78\xbd\x3b\x0d\x1e\x3a\x17", 8, GRND_NONBLOCK) = 8
+929   brk(NULL)                         = 0xaaaaf4543000
+929   brk(0xaaaaf4564000)               = 0xaaaaf4564000
+929   write(1, "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \320\270\320\274\321\217 \321\204\320\260\320\271\320\273\320\260"..., 48) = 48
+929   fstat(0, {st_mode=S_IFIFO|0600, st_size=0, ...}) = 0
+929   read(0, "build/lab01-linux/lab04-short.tx"..., 4096) = 90
+929   write(1, "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \320\270\320\274\321\217 \321\204\320\260\320\271\320\273\320\260"..., 48) = 48
+929   write(1, "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \321\201\321\202\321\200\320\276\320\272\320\270. \320\224\320"..., 80) = 80
+929   read(0, "", 4096)                 = 0
+929   openat(AT_FDCWD, "build/lab01-linux/lab04-short.txt", O_RDWR|O_CREAT|O_TRUNC, 0644) = 3
+929   ftruncate(3, 11)                  = 0
+929   mmap(NULL, 11, PROT_READ|PROT_WRITE, MAP_SHARED, 3, 0) = 0xffffb30dd000
+929   close(3)                          = 0
+929   openat(AT_FDCWD, "build/lab01-linux/lab04-long.txt", O_RDWR|O_CREAT|O_TRUNC, 0644) = 3
+929   ftruncate(3, 12)                  = 0
+929   mmap(NULL, 12, PROT_READ|PROT_WRITE, MAP_SHARED, 3, 0) = 0xffffb30dc000
+929   close(3)                          = 0
+929   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0xffffb30defb0) = 930
+929   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+930   set_robust_list(0xffffb30defc0, 24 <unfinished ...>
+929   <... clone resumed>, child_tidptr=0xffffb30defb0) = 931
+930   <... set_robust_list resumed>)    = 0
+929   wait4(930,  <unfinished ...>
+931   set_robust_list(0xffffb30defc0, 24 <unfinished ...>
+930   execve("/work/build/lab01-linux/lab04/lab04_child", ["lab04_child", "build/lab01-linux/lab04-short.tx"...], 0xfffff2ddab88 /* 8 vars */ <unfinished ...>
+931   <... set_robust_list resumed>)    = 0
+931   execve("/work/build/lab01-linux/lab04/lab04_child", ["lab04_child", "build/lab01-linux/lab04-long.txt"], 0xfffff2ddab88 /* 8 vars */ <unfinished ...>
+930   <... execve resumed>)             = 0
+931   <... execve resumed>)             = 0
+930   brk(NULL <unfinished ...>
+931   brk(NULL <unfinished ...>
+930   <... brk resumed>)                = 0xaaab1bf69000
+931   <... brk resumed>)                = 0xaaaad780a000
+930   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+931   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+930   <... mmap resumed>)               = 0xffffb3c39000
+931   <... mmap resumed>)               = 0xffff983fd000
+930   faccessat(AT_FDCWD, "/etc/ld.so.preload", R_OK <unfinished ...>
+931   faccessat(AT_FDCWD, "/etc/ld.so.preload", R_OK <unfinished ...>
+930   <... faccessat resumed>)          = -1 ENOENT (No such file or directory)
+931   <... faccessat resumed>)          = -1 ENOENT (No such file or directory)
+930   openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+931   openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+930   <... openat resumed>)             = 3
+931   <... openat resumed>)             = 3
+930   fstat(3,  <unfinished ...>
+931   fstat(3,  <unfinished ...>
+930   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=8743, ...}) = 0
+931   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=8743, ...}) = 0
+930   mmap(NULL, 8743, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+931   mmap(NULL, 8743, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+930   <... mmap resumed>)               = 0xffffb3c36000
+931   <... mmap resumed>)               = 0xffff983fa000
+930   close(3 <unfinished ...>
+931   close(3 <unfinished ...>
+930   <... close resumed>)              = 0
+931   <... close resumed>)              = 0
+930   openat(AT_FDCWD, "/lib/aarch64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+931   openat(AT_FDCWD, "/lib/aarch64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+930   <... openat resumed>)             = 3
+931   <... openat resumed>)             = 3
+930   read(3,  <unfinished ...>
+931   read(3,  <unfinished ...>
+930   <... read resumed>"\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\360\206\2\0\0\0\0\0"..., 832) = 832
+931   <... read resumed>"\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\360\206\2\0\0\0\0\0"..., 832) = 832
+930   fstat(3,  <unfinished ...>
+931   fstat(3,  <unfinished ...>
+930   <... fstat resumed>{st_mode=S_IFREG|0755, st_size=1722920, ...}) = 0
+931   <... fstat resumed>{st_mode=S_IFREG|0755, st_size=1722920, ...}) = 0
+930   mmap(NULL, 1892240, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_DENYWRITE, -1, 0 <unfinished ...>
+931   mmap(NULL, 1892240, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_DENYWRITE, -1, 0 <unfinished ...>
+930   <... mmap resumed>)               = 0xffffb3a33000
+931   <... mmap resumed>)               = 0xffff981f7000
+930   mmap(0xffffb3a40000, 1826704, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0 <unfinished ...>
+931   mmap(0xffff98200000, 1826704, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0 <unfinished ...>
+930   <... mmap resumed>)               = 0xffffb3a40000
+931   <... mmap resumed>)               = 0xffff98200000
+930   munmap(0xffffb3a33000, 53248 <unfinished ...>
+931   munmap(0xffff981f7000, 36864 <unfinished ...>
+930   <... munmap resumed>)             = 0
+931   <... munmap resumed>)             = 0
+930   munmap(0xffffb3bfe000, 12176 <unfinished ...>
+931   munmap(0xffff983be000, 28560 <unfinished ...>
+930   <... munmap resumed>)             = 0
+931   <... munmap resumed>)             = 0
+930   mprotect(0xffffb3bda000, 77824, PROT_NONE <unfinished ...>
+931   mprotect(0xffff9839a000, 77824, PROT_NONE <unfinished ...>
+930   <... mprotect resumed>)           = 0
+931   <... mprotect resumed>)           = 0
+930   mmap(0xffffb3bed000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19d000 <unfinished ...>
+931   mmap(0xffff983ad000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19d000 <unfinished ...>
+930   <... mmap resumed>)               = 0xffffb3bed000
+931   <... mmap resumed>)               = 0xffff983ad000
+930   mmap(0xffffb3bf2000, 49040, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+931   mmap(0xffff983b2000, 49040, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+930   <... mmap resumed>)               = 0xffffb3bf2000
+931   <... mmap resumed>)               = 0xffff983b2000
+930   close(3 <unfinished ...>
+931   close(3 <unfinished ...>
+930   <... close resumed>)              = 0
+931   <... close resumed>)              = 0
+930   set_tid_address(0xffffb3c39fd0 <unfinished ...>
+931   set_tid_address(0xffff983fdfd0 <unfinished ...>
+930   <... set_tid_address resumed>)    = 930
+931   <... set_tid_address resumed>)    = 931
+930   set_robust_list(0xffffb3c39fe0, 24 <unfinished ...>
+931   set_robust_list(0xffff983fdfe0, 24 <unfinished ...>
+930   <... set_robust_list resumed>)    = 0
+931   <... set_robust_list resumed>)    = 0
+930   rseq(0xffffb3c3a620, 0x20, 0, 0xd428bc00 <unfinished ...>
+931   rseq(0xffff983fe620, 0x20, 0, 0xd428bc00 <unfinished ...>
+930   <... rseq resumed>)               = 0
+931   <... rseq resumed>)               = 0
+930   mprotect(0xffffb3bed000, 12288, PROT_READ <unfinished ...>
+931   mprotect(0xffff983ad000, 12288, PROT_READ <unfinished ...>
+930   <... mprotect resumed>)           = 0
+931   <... mprotect resumed>)           = 0
+930   mprotect(0xaaaaddfaf000, 4096, PROT_READ <unfinished ...>
+931   mprotect(0xaaaaccf6f000, 4096, PROT_READ <unfinished ...>
+930   <... mprotect resumed>)           = 0
+931   <... mprotect resumed>)           = 0
+930   mprotect(0xffffb3c3f000, 8192, PROT_READ <unfinished ...>
+931   mprotect(0xffff98403000, 8192, PROT_READ <unfinished ...>
+930   <... mprotect resumed>)           = 0
+931   <... mprotect resumed>)           = 0
+930   prlimit64(0, RLIMIT_STACK, NULL,  <unfinished ...>
+931   prlimit64(0, RLIMIT_STACK, NULL,  <unfinished ...>
+930   <... prlimit64 resumed>{rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+931   <... prlimit64 resumed>{rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+930   munmap(0xffffb3c36000, 8743 <unfinished ...>
+931   munmap(0xffff983fa000, 8743 <unfinished ...>
+930   <... munmap resumed>)             = 0
+931   <... munmap resumed>)             = 0
+930   openat(AT_FDCWD, "build/lab01-linux/lab04-short.txt", O_RDWR <unfinished ...>
+931   openat(AT_FDCWD, "build/lab01-linux/lab04-long.txt", O_RDWR) = 3
+930   <... openat resumed>)             = 3
+931   fstat(3,  <unfinished ...>
+930   fstat(3,  <unfinished ...>
+931   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=12, ...}) = 0
+931   mmap(NULL, 12, PROT_READ|PROT_WRITE, MAP_SHARED, 3, 0 <unfinished ...>
+930   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=11, ...}) = 0
+931   <... mmap resumed>)               = 0xffff983fc000
+930   mmap(NULL, 11, PROT_READ|PROT_WRITE, MAP_SHARED, 3, 0 <unfinished ...>
+931   close(3 <unfinished ...>
+930   <... mmap resumed>)               = 0xffffb3c38000
+931   <... close resumed>)              = 0
+930   close(3 <unfinished ...>
+931   msync(0xffff983fc000, 12, MS_SYNC <unfinished ...>
+930   <... close resumed>)              = 0
+931   <... msync resumed>)              = 0
+930   msync(0xffffb3c38000, 11, MS_SYNC <unfinished ...>
+931   munmap(0xffff983fc000, 12)        = 0
+930   <... msync resumed>)              = 0
+930   munmap(0xffffb3c38000, 11 <unfinished ...>
+931   exit_group(0 <unfinished ...>
+930   <... munmap resumed>)             = 0
+931   <... exit_group resumed>)         = ?
+930   exit_group(0 <unfinished ...>
+931   +++ exited with 0 +++
+929   <... wait4 resumed>0xfffff2dda930, 0, NULL) = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+930   <... exit_group resumed>)         = ?
+929   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=931, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+929   wait4(930,  <unfinished ...>
+930   +++ exited with 0 +++
+929   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 930
+929   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=930, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+929   wait4(931, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 931
+929   munmap(0xffffb30dd000, 11)        = 0
+929   munmap(0xffffb30dc000, 12)        = 0
+929   exit_group(0)                     = ?
+929   +++ exited with 0 +++
